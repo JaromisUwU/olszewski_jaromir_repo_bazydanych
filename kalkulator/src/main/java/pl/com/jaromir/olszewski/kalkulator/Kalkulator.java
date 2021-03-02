@@ -7,6 +7,7 @@ package pl.com.jaromir.olszewski.kalkulator;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.time.temporal.ChronoUnit;
 import javax.swing.JOptionPane;
 
@@ -484,18 +485,24 @@ public class Kalkulator extends javax.swing.JFrame {
 
     private void jmenudniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmenudniActionPerformed
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MM yyy");
-   
-        String data = JOptionPane.showInputDialog("Wprowac datę ");
+        String info = "\n";
+        while (!info.equals("ok")){
+             String data = JOptionPane.showInputDialog("Wprowac datę "+""+info);
         
  //       System.out.print(data);
- if(data != null && data.length()>0){
+ if(data != null && data.length()==10){
         LocalDate ldnow = LocalDate.now();
+        try{
         LocalDate ldinput = LocalDate.parse(data, formatter);
  //       System.out.println(ldnow+" "+ldinput);
  
         long days = ChronoUnit.DAYS.between(ldinput, ldnow);
 //        System.out.println("ilosc dni"+days);
         JOptionPane.showMessageDialog(rootPane, ""+days, "ilosc dni", HEIGHT);
+        }catch(DateTimeParseException ex){
+                info = "wprowadzono zły format daty!!!";
+        }      
+        }
         }
     }//GEN-LAST:event_jmenudniActionPerformed
 
