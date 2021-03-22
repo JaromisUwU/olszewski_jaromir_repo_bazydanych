@@ -153,7 +153,7 @@ public class Sprawdzian extends javax.swing.JFrame {
         String dwa=Text2.getText();
         try
         {
-            FileWriter Writer=new FileWriter("spr.txt",true);
+            FileWriter Writer=new FileWriter("jaromir olszewski.txt.txt",true);
             Writer.write(""+jed+""+dwa);
             Writer.write(System.getProperty("separator"));
             Writer.close();
