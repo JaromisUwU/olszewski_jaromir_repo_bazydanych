@@ -1,0 +1,15 @@
+1.jak dodać urzytkownika do bazy danych
+2.jak dodać uprawnienia urzytkownikowi do bazy danych
+3.jakim zapytaniem dodać dane do tabeli
+4.podaj 5 typów danych
+5.po co dawać ograniczenia ilości znaków w zmiennych 
+6.Co w tworzeniu tabelki daje fraza Not Null
+7.co to jest Auto Increnment
+8.klucz podstawowy do czygo słuzy 
+9.klucz główny do czego słózy
+10.jak sie robi relacje
+11.do czego słuzy funkcja sum 
+12.do czego słuzy funkcja avg
+13.do czego słuzy funkcja upper
+14. do czego słuzy funkcja lower
+15. do czego słuzy funkcja group by
